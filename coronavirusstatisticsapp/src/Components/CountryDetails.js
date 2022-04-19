@@ -1,4 +1,5 @@
-const CountryDetails = () =>{
+const CountryDetails = (countries) =>{
+    
     return(
         <div>
             
