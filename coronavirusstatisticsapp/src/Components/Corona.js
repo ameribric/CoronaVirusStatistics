@@ -14,8 +14,8 @@ const Corona = () =>{
         let res = await req.json()
         let countriesArray = []
         for (const country in res) {
-          console.log('COUNTRY', res[country])
-          countriesArray.push(res[country])
+          console.log(res[country])
+          countriesArray.push({...res[country], name: country})
         }
         setCountries(countriesArray)
         console.log(res)
@@ -26,11 +26,12 @@ const Corona = () =>{
             <h1>Corona Virus Statistics</h1>
             
             {
-              countries.map((element, i) => {
+              countries.map((element) => {
+                  console.log(element)
                   return(
-                      <div key={i}>
-                          <h4>{element.All.deaths} deaths</h4>
-                          </div>
+                      <div > 
+                        <CountryDetails name={element.name} countries={element} detail={element.All} setCountries={setCountries} />
+                        </div>
                   )
               })
             }
