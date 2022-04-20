@@ -1,26 +1,31 @@
 import React from "react";
-import CountryDetails from "./CountryDetails";
-import { useState } from "react";
 
 
 
-const ListofCountries = ({name, visible, setVisible,setSelectCountry})=>{
-    
+
+const ListofCountries = ({details,name})=>{
+    const [visible,setVisible]=useState(false)
     
    
+   
     return(
-        <div>
+        <div className="list">
             <ul>
+               
 
             {visible?(
-                <li onClick={()=>{setVisible(!visible)} }> {name}</li>
+                <li onClick={()=>{
+
+                    setVisible(!visible)} }> {name}</li>
                 
                 ) :(
                     <li onClick={()=>setVisible(!visible)}> {name}</li>
                     
                     )} 
-    
+                   
+                   <CountryDetails visible={visible} setVisible={setVisible}   details={details} setSelectCountry={setSelectCountry}/>
                     </ul>
+                    
         </div>
     )
 }

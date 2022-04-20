@@ -8,7 +8,7 @@ import Search from './Search'
 
 const Corona = () =>{
     const [countries,setCountries]=useState([])
-    const [visible,setVisible]=useState(false)
+    
     const [selectCountry,setSelectCountry]=useState({})
     
 
@@ -30,21 +30,25 @@ const Corona = () =>{
         <div >
             <h1>Corona Virus Statistics</h1>
             <h2>List of countries</h2>
+            <div className="allCountries">
             {
+              
               countries.map((element) => {
                 
                   
                   return(
                       <div > 
-                        <ListofCountries visible={visible} setVisible={setVisible} name={element.name} setSelectCountry={setSelectCountry}/>
-                        <CountryDetails visible={visible} setVisible={setVisible} details={element.All} setSelectCountry={setSelectCountry}/>
+                        <ListofCountries    name={element.name}   setSelectCountry={setSelectCountry}/>
+                        <CountryDetails    details={element.All} setSelectCountry={setSelectCountry}/>
                         
                         
                         
                         </div>
                   )
               })
+              
             }
+            </div>
         </div>
     )
 }
