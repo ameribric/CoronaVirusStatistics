@@ -38,11 +38,8 @@ const Corona = () =>{
                   
                   return(
                       <div > 
-                        <ListofCountries    name={element.name}   setSelectCountry={setSelectCountry}/>
-                        <CountryDetails    details={element.All} setSelectCountry={setSelectCountry}/>
-                        
-                        
-                        
+                        <ListofCountries  country={element.All} name={element.name} />
+                        {/* <CountryDetails visible={visible} setVisible={setVisible} details={selectCountry} setSelectCountry={setSelectCountry}/> */}
                         </div>
                   )
               })
