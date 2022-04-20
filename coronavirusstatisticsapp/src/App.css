@@ -24,6 +24,8 @@
   color: white;
 }
 
+
+
 .App-link {
   color: #61dafb;
 }
@@ -35,4 +37,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.listOfCountries{
+  left: 0%;
+  right: 50%;
+  height: 50%;
+  overflow: scroll;
+  border: solid 1px red;
+
+}
+.details{
+  border: 1px solid royalblue;
+  background-color: #61dafb;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: small;
+  
+  
+}
+
+.button {
+  position: inherit;
+  right: 0;
+  top: 0;
+  
 }

@@ -1,11 +1,16 @@
 
 import CountryDetails from "./CountryDetails";
 import React, {useState, useEffect } from "react";
+import ListofCountries from './ListofCountries';
+import Search from './Search'
 
 
 
 const Corona = () =>{
     const [countries,setCountries]=useState([])
+    const [visible,setVisible]=useState(false)
+    const [selectCountry,setSelectCountry]=useState({})
+    
 
     
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -18,29 +23,28 @@ const Corona = () =>{
           countriesArray.push({...res[country], name: country})
         }
         setCountries(countriesArray)
-        console.log(res)
+      
       }
       useEffect(request, [])
     return(
-        <div>
+        <div >
             <h1>Corona Virus Statistics</h1>
-            
+            <h2>List of countries</h2>
             {
               countries.map((element) => {
-                  console.log(element)
+                
+                  
                   return(
                       <div > 
-                        <CountryDetails name={element.name} countries={element} detail={element.All} setCountries={setCountries} />
+                        <ListofCountries visible={visible} setVisible={setVisible} name={element.name} setSelectCountry={setSelectCountry}/>
+                        <CountryDetails visible={visible} setVisible={setVisible} details={element.All} setSelectCountry={setSelectCountry}/>
+                        
+                        
+                        
                         </div>
                   )
               })
             }
-              
-                
-            
-            
-
-            
         </div>
     )
 }
