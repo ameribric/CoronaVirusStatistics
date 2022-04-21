@@ -1,19 +1,24 @@
-import React, { useState } from 'react';
+import React from "react";
 
-const Search =({country,CountryDetails})=>{
-    const [searchQuery, setSearchQuery] = useState('')
-const searchResults = country.filter((country) => {
-    return country.name.toLowerCase().includes(searchQuery.toLowerCase())
-});
-const countryNames = searchResults.map((country) => {
-    return <CountryDetails key={country} country={country} />
-});
-const handleOnChange = (event) => {
-    setSearchQuery(event.target.value)
-};
-<input type="text" placeholder="Search..." onChange={handleOnChange} />
 
+function Search({countries,setCountries,allCountry}) {
+  return (
+    <div className="search">
+      <input
+        type="text"
+        placeholder=""
+        onChange={(e) =>{ 
+            if(!e.target.value.toLocaleLowerCase()) return setCountries(allCountry);
+            let search = countries.filter((element)=>{
+                return element.name?.includes(e.target.value)
+            })
+            if (search.length>0) setCountries(search)
+        }
+        }
+      />
+      <i className="circular search link icon"></i>
+    </div>
+  );
 }
 
-
-export default Search
+export default Search;

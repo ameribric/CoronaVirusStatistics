@@ -1,11 +1,5 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,16 +7,7 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+
 
 
 
@@ -46,6 +31,7 @@
   height: 50%;
   overflow: scroll;
   border: solid 1px red;
+  background-image: url(https://cdn.who.int/media/images/default-source/mca/mca-covid-19/coronavirus-2.tmb-479v.jpg?sfvrsn=4dba955c_6%20479w);
 
 }
 .details{
@@ -58,8 +44,19 @@
 }
 
 .button {
-  position: inherit;
+  position: fix;
   right: 0;
   top: 0;
   
+}
+.search{
+  display: block;
+
+  border-radius: 5em 5em 5em 5em;
+}
+.header{
+  background-color: blue;
+  text-align: center;
+  text-transform: capitalize;
+  background-image: url();
 }

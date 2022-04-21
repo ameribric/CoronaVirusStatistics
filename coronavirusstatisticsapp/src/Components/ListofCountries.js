@@ -8,27 +8,19 @@ const ListofCountries = ({name, country })=>{
     
     const{confirmed,deaths,capital_city,location,population,recovered}=country
     const [visible,setVisible]=useState(false)
-   
     return(
-        <div className="list">
+        <div>
+            <div>
             <ul>
-               
-
             {visible?(
-                <li onClick={()=>{
-                    setVisible(!visible)}}> {name}</li>
-                
+                <li onClick={()=>{setVisible(!visible)}}> {name}</li>
                 ) :(
                     <li onClick={()=>setVisible(!visible)}> {name}</li>
-                    
-                    )} 
-                   
-    
-                    </ul>
-
-
+                )}
+            </ul>
+            </div>
         <div  style={{display: visible ? "block" : "none"}} className="details">
-          <div>
+          <div className="countryDetails">
               <button className="button" onClick={()=>{setVisible(false)}}>[x]</button>
               <h4>population : {population}</h4>
               <h4>capital_city : {capital_city}</h4>
