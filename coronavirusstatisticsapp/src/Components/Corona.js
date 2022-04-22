@@ -22,12 +22,13 @@ const Corona = () =>{
       }
       useEffect(request, [])
     return(
-        <div >
-            
+        <div  className="container">
+            <div className="header1">
             <div className="header"><h1 > Corona Virus Statistics</h1></div>
-            <h2>List of countries</h2>
-            <div className="allCountries"> 
+            <h2 >List of countries</h2>
             <Search countries={countries} setCountries={setCountries} allCountry={allCountry}/>
+            </div>
+            <div className="allCountries"> 
             {countries.map((element) => {
                   return(
                       <div > 

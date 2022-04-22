@@ -25,20 +25,16 @@
 }
 
 
-.listOfCountries{
-  left: 0%;
-  right: 50%;
-  height: 50%;
-  overflow: scroll;
-  border: solid 1px red;
-  background-image: url(https://cdn.who.int/media/images/default-source/mca/mca-covid-19/coronavirus-2.tmb-479v.jpg?sfvrsn=4dba955c_6%20479w);
 
-}
+  
+
+
 .details{
   border: 1px solid royalblue;
   background-color: #61dafb;
   font-family: 'Courier New', Courier, monospace;
   font-size: small;
+  max-height: min-content;
   
   
 }
@@ -55,8 +51,34 @@
   border-radius: 5em 5em 5em 5em;
 }
 .header{
-  background-color: blue;
+  background-color: rgb(220, 220, 233);
   text-align: center;
   text-transform: capitalize;
-  background-image: url();
+  text-decoration: underline;
 }
+.country {
+  height: 280px;
+  width: 150px;
+  float: left;
+  cursor: default;
+  
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+.close-button {
+  
+  font-weight: bold;
+  text-decoration: none;
+  top: 2.5%;
+  left: 2.5%;
+  color: #fff;
+}
+.allCountries{
+  background-image: url();
+  background-repeat: no-repeat;
+}
+.header1{
+background-color:rgb(224, 216, 201);
+}
+
