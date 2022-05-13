@@ -40,7 +40,7 @@ useEffect(() => {
 },[]) 
      
 function onAddCountry(element){
-  console.log(element)
+  console.log("onAddCountry",element)
   const countriesNew= [...countries, element ]
   setCountries(countriesNew)
 

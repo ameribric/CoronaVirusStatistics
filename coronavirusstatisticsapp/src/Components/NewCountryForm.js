@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function NewCountryForm({ onAddCountry }) {
+function NewCountryForm({ onAddCountry, newItem }) {
 
   const [country, setCountry] = useState("")
   const [confirmedCases, setConfirmedCases] = useState("")
@@ -10,17 +10,31 @@ function NewCountryForm({ onAddCountry }) {
 
 
 
-  console.log(country, confirmedCases, deaths, population, lifexpectancy)
+ 
+
+
 
   function handleSubmit(e) {
     e.preventDefault();
-    const newobj= {
-      "country": country,
-      "confirmedCases": confirmedCases,
-    "deaths": deaths,
-      "population": population,
-      "life_expectancy": lifexpectancy
-    }
+
+
+      const newitem= {
+        "country": country,
+          "confirmedCases": confirmedCases,
+        "deaths": deaths,
+          "population": population,
+          "life_expectancy": lifexpectancy
+      }
+    
+
+    
+  
+
+
+
+ 
+      
+    
     console.log()
     fetch("http://localhost:3001/countries", {
       method: "POST",
@@ -28,13 +42,25 @@ function NewCountryForm({ onAddCountry }) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(
-       newobj
+       newitem
       )
      })
-      .then((r) => r.json())
-      .then((newCountry) => console.log(newCountry))
-      .catch(error => console.log(error))
+      .then((r) => {
+      return  r.json()
+     
+
+      })
+      .then((newCountry) => {   setCountry("")
+      setConfirmedCases("")
+      setDeaths("")
+      setPopulation("")
+      setLife("")
+      onAddCountry(newCountry)
+      console.log(newCountry)})
+     
   }
+
+  
   return (
     <div className="new-country-form">
       <h2>New Country</h2>
