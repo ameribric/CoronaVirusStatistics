@@ -82,3 +82,22 @@
 background-color:rgb(224, 216, 201);
 }
 
+.new-country-form {
+  padding: 2rem 1rem;
+  margin: 2rem 0;
+  background-color: rgba(181, 250, 181, 0.5);
+}
+
+.new-country-form form {
+  display: flex;
+  justify-content: center;
+}
+
+.new-country-form input {
+  margin-right: 2rem;
+  flex: 1;
+}
+
+.new-country-form button {
+  width: 150px;
+}

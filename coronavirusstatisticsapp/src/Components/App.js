@@ -1,5 +1,5 @@
 import React from "react";
-import Corona from './Components/Corona';
+import Corona from './Corona';
 import './App.css';
 
 function App() {

@@ -1,0 +1,30 @@
+{"countries":
+  [
+
+  {
+      "country": "Afghanistan",
+      "confirmedCases": 75,
+      "deaths": 7686,
+      "population": 35530081,
+      "life_expectancy": "70.9"
+      
+  },
+  {
+    "country": "Andorra",
+    "confirmedCases": 100,
+    "deaths": 801,
+    "population": 330081,
+    "life_expectancy": "105.9"
+    
+}, 
+{
+  "country": "Brazil",
+  "confirmedCases": 105,
+  "deaths": 76,
+  "population": 773727,
+  "life_expectancy": "41.9"
+  
+}
+
+  
+]}
